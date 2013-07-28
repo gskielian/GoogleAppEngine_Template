@@ -32,5 +32,5 @@ class About(BaseHandler):
 
 
 
-app = webapp2.WSGIApplication([('/', Welcome)],[('/about', About)],
+app = webapp2.WSGIApplication([('/', Welcome),('/about', About)],
                               debug=True)
