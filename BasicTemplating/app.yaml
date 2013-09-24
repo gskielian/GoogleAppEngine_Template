@@ -9,7 +9,7 @@ handlers:
   static_dir: static
 
 - url: /.*
-  script: main.app
+  script: basic-with-templating.app
 
 libraries:
 - name: webapp2
