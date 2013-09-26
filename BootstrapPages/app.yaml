@@ -1,0 +1,39 @@
+application: myfirstapp
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /assets
+  static_dir: assets
+
+- url: /dist
+  static_dir: dist
+
+- url: /fonts
+  static_dir: fonts
+
+- url: /js
+  static_dir: js
+
+- url: /less
+  static_dir: less
+
+- url: /_includes
+  static_dir: _includes
+
+- url: /_layouts
+  static_dir: _layouts
+
+
+- url: /.*
+  script: now-with-bootstrap-templates.app
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+
+- name: jinja2
+  version: latest
+
